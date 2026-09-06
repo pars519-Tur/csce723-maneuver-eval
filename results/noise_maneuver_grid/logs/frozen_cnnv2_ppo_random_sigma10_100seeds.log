@@ -1,0 +1,372 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:tensorflow:OMP_NUM_THREADS is no longer used by the default Keras config. To configure the number of threads, use tf.config.threading APIs.
+skip completed seed=0
+skip completed seed=1
+skip completed seed=2
+skip completed seed=3
+skip completed seed=4
+skip completed seed=5
+skip completed seed=6
+skip completed seed=7
+skip completed seed=8
+skip completed seed=9
+skip completed seed=10
+skip completed seed=11
+skip completed seed=12
+skip completed seed=13
+skip completed seed=14
+skip completed seed=15
+skip completed seed=16
+skip completed seed=17
+skip completed seed=18
+skip completed seed=19
+skip completed seed=20
+skip completed seed=21
+skip completed seed=22
+skip completed seed=23
+skip completed seed=24
+skip completed seed=25
+skip completed seed=26
+skip completed seed=27
+skip completed seed=28
+skip completed seed=29
+skip completed seed=30
+skip completed seed=31
+skip completed seed=32
+skip completed seed=33
+skip completed seed=34
+skip completed seed=35
+skip completed seed=36
+skip completed seed=37
+skip completed seed=38
+skip completed seed=39
+skip completed seed=40
+skip completed seed=41
+skip completed seed=42
+skip completed seed=43
+skip completed seed=44
+skip completed seed=45
+skip completed seed=46
+skip completed seed=47
+skip completed seed=48
+skip completed seed=49
+skip completed seed=50
+skip completed seed=51
+skip completed seed=52
+skip completed seed=53
+skip completed seed=54
+skip completed seed=55
+skip completed seed=56
+skip completed seed=57
+skip completed seed=58
+skip completed seed=59
+skip completed seed=60
+skip completed seed=61
+skip completed seed=62
+skip completed seed=63
+skip completed seed=64
+skip completed seed=65
+skip completed seed=66
+skip completed seed=67
+skip completed seed=68
+skip completed seed=69
+skip completed seed=70
+skip completed seed=71
+skip completed seed=72
+skip completed seed=73
+skip completed seed=74
+skip completed seed=75
+skip completed seed=76
+skip completed seed=77
+skip completed seed=78
+skip completed seed=79
+skip completed seed=80
+skip completed seed=81
+skip completed seed=82
+skip completed seed=83
+skip completed seed=84
+skip completed seed=85
+skip completed seed=86
+skip completed seed=87
+skip completed seed=88
+skip completed seed=89
+skip completed seed=90
+skip completed seed=91
+skip completed seed=92
+skip completed seed=93
+skip completed seed=94
+skip completed seed=95
+skip completed seed=96
+skip completed seed=97
+skip completed seed=98
+skip completed seed=99
+{
+  "output": "/Users/onuraytekn977/Desktop/thesis-wiki/experiments/csce723_maneuver_eval/results/noise_maneuver_grid/frozen_cnnv2_ppo_random_sigma10_100seeds.p",
+  "policy": "frozen_cnnv2_ppo",
+  "condition": "maneuver",
+  "episodes": 100,
+  "training_performed": false,
+  "maneuvering_fraction": 0.2,
+  "maneuver_plan": {
+    "plan_type": "random",
+    "maneuvering_fraction": 0.2,
+    "magnitude_range_mps": [
+      1.0,
+      100.0
+    ],
+    "magnitude_distribution": "log_uniform",
+    "direction_distribution": "isotropic_rtn",
+    "burn_time_window_seconds": [
+      600.0,
+      4800.0
+    ],
+    "burn_time_distribution": "uniform",
+    "plan_seed": 20260823,
+    "magnitude_scale": 1.0,
+    "role": "treatment"
+  },
+  "measurement_noise": {
+    "sigma_km": 10.0,
+    "seed": 20260823
+  },
+  "nis_recorded": true,
+  "nis_summary_last_episode": {
+    "measurements": 526,
+    "expected_mean_under_consistency": 3.0,
+    "all": {
+      "measurements": 526,
+      "mean_nis": 3.3678449480167654,
+      "median_nis": 2.006661134536,
+      "fraction_above_chi2_p95": 0.07034220532319392,
+      "fraction_above_chi2_p99": 0.030418250950570342
+    },
+    "non_maneuvering": {
+      "measurements": 429,
+      "mean_nis": 2.5640804141705975,
+      "median_nis": 1.8592326276017273,
+      "fraction_above_chi2_p95": 0.053613053613053616,
+      "fraction_above_chi2_p99": 0.011655011655011656
+    },
+    "maneuvering_before_burn": {
+      "measurements": 53,
+      "mean_nis": 2.382035113981985,
+      "median_nis": 2.041188034189612,
+      "fraction_above_chi2_p95": 0.0,
+      "fraction_above_chi2_p99": 0.0
+    },
+    "maneuvering_after_burn": {
+      "measurements": 44,
+      "mean_nis": 12.392001907649698,
+      "median_nis": 3.307867219101002,
+      "fraction_above_chi2_p95": 0.3181818181818182,
+      "fraction_above_chi2_p99": 0.25
+    }
+  },
+  "mean_final_trace_covariance": 0.010594620399551877,
+  "maneuvering_rsos": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "reacquired_maneuvering_rsos": [
+    15,
+    16,
+    11,
+    17,
+    16,
+    12,
+    15,
+    13,
+    15,
+    13,
+    14,
+    12,
+    17,
+    16,
+    12,
+    16,
+    17,
+    14,
+    13,
+    17,
+    14,
+    13,
+    15,
+    16,
+    16,
+    12,
+    14,
+    17,
+    12,
+    16,
+    16,
+    15,
+    16,
+    16,
+    15,
+    13,
+    13,
+    10,
+    14,
+    15,
+    15,
+    13,
+    15,
+    16,
+    11,
+    13,
+    12,
+    13,
+    14,
+    12,
+    14,
+    15,
+    12,
+    11,
+    16,
+    11,
+    14,
+    8,
+    17,
+    13,
+    16,
+    13,
+    15,
+    12,
+    18,
+    13,
+    15,
+    14,
+    16,
+    15,
+    13,
+    8,
+    14,
+    17,
+    14,
+    16,
+    13,
+    14,
+    15,
+    16,
+    13,
+    17,
+    13,
+    10,
+    17,
+    14,
+    13,
+    14,
+    13,
+    16,
+    15,
+    17,
+    11,
+    9,
+    14,
+    17,
+    12,
+    14,
+    12,
+    18
+  ]
+}

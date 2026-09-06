@@ -1,0 +1,64 @@
+schema_version: 1
+manifest_id: seed_051_rate_05pct_dvT_10mps
+pair_id: seed_051
+runnable: true
+base_seed: 51
+scenario:
+  source: try_code/MARLSSA-main/Environments/scenario_configs/3_agents_eval.yaml
+  source_sha256: c107665e8da659a1b70d458316a7ec374d84be06f3fdedc171db7ea4bd5ee8ca
+  sensors: 3
+  rsos: 100
+  episode_length_seconds: 5400
+initial_state_snapshot:
+  status: ready
+  path: experiments/csce723_maneuver_eval/results/snapshots/seed_051.npz
+  sha256: f7bb55caef6f0123d43dd8fc53eedcad05e20cf478a139e7083f8fb428b6e1d6
+  contents:
+  - truth_tle_records
+  - truth_cartesian_state
+  - estimated_tle_records
+  - estimated_orbital_elements
+  - covariance
+  - initial_sensor_pointing
+randomness:
+  smith_environment_seed: 51
+  detection_model: deterministic_probability_one
+  policy_exploration: false
+conditions:
+- coast
+- maneuver
+maneuver_plan:
+  status: ready
+  selection_seed: 104780
+  frame: RTN
+  events:
+  - rso_id: 1
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 10.0
+    - 0.0
+  - rso_id: 40
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 10.0
+    - 0.0
+  - rso_id: 42
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 10.0
+    - 0.0
+  - rso_id: 46
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 10.0
+    - 0.0
+  - rso_id: 99
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 10.0
+    - 0.0

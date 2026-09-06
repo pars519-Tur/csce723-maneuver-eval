@@ -1,0 +1,134 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: csce723-paired-scenario-manifest-v1
+title: CSCE723 Paired Coast/Maneuver Scenario Manifest
+type: object
+additionalProperties: false
+required:
+  - schema_version
+  - manifest_id
+  - pair_id
+  - runnable
+  - base_seed
+  - scenario
+  - initial_state_snapshot
+  - randomness
+  - conditions
+  - maneuver_plan
+properties:
+  schema_version:
+    const: 1
+  manifest_id:
+    type: string
+    minLength: 1
+  pair_id:
+    type: string
+    minLength: 1
+  runnable:
+    type: boolean
+  base_seed:
+    type: integer
+    minimum: 0
+  scenario:
+    type: object
+    additionalProperties: false
+    required: [source, source_sha256, sensors, rsos, episode_length_seconds]
+    properties:
+      source:
+        type: string
+      source_sha256:
+        type: string
+        pattern: "^[0-9a-f]{64}$"
+      sensors:
+        const: 3
+      rsos:
+        const: 100
+      episode_length_seconds:
+        const: 5400
+  initial_state_snapshot:
+    type: object
+    additionalProperties: false
+    required: [status, path, sha256, contents]
+    properties:
+      status:
+        enum: [not_generated, ready]
+      path:
+        type: [string, "null"]
+      sha256:
+        type: [string, "null"]
+        pattern: "^[0-9a-f]{64}$"
+      contents:
+        type: array
+        items:
+          enum:
+            - truth_tle_records
+            - truth_cartesian_state
+            - estimated_tle_records
+            - estimated_orbital_elements
+            - covariance
+            - initial_sensor_pointing
+        minItems: 5
+        uniqueItems: true
+  randomness:
+    type: object
+    additionalProperties: false
+    required: [smith_environment_seed, detection_model, policy_exploration]
+    properties:
+      smith_environment_seed:
+        type: integer
+        minimum: 0
+      detection_model:
+        const: deterministic_probability_one
+      policy_exploration:
+        const: false
+  conditions:
+    type: array
+    minItems: 2
+    maxItems: 2
+    uniqueItems: true
+    items:
+      enum: [coast, maneuver]
+    allOf:
+      - contains:
+          const: coast
+      - contains:
+          const: maneuver
+  maneuver_plan:
+    type: object
+    additionalProperties: false
+    required: [status, selection_seed, frame, events]
+    properties:
+      status:
+        enum: [pending_calibration, ready]
+      selection_seed:
+        type: integer
+        minimum: 0
+      frame:
+        const: RTN
+      events:
+        type: array
+        items:
+          type: object
+          additionalProperties: false
+          required: [rso_id, time_seconds, delta_v_mps]
+          properties:
+            rso_id:
+              type: integer
+              minimum: 0
+              maximum: 99
+            time_seconds:
+              type: number
+              exclusiveMinimum: 0
+              exclusiveMaximum: 5400
+            delta_v_mps:
+              type: array
+              minItems: 3
+              maxItems: 3
+              items:
+                type: number
+            burn_duration_seconds:
+              description: >
+                Absent or 0 is an impulse. A positive value spreads the same delta-v over that
+                many seconds, the finite-burn model used for low-thrust maneuvers.
+              type: number
+              minimum: 0
+              exclusiveMaximum: 5400

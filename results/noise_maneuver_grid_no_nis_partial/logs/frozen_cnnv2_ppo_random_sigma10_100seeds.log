@@ -1,0 +1,56 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:tensorflow:OMP_NUM_THREADS is no longer used by the default Keras config. To configure the number of threads, use tf.config.threading APIs.
+policy=frozen_cnnv2_ppo condition=maneuver seed=0
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:138: DeprecationWarning: [33mWARN: Function `hash_seed(seed, max_bytes)` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:175: DeprecationWarning: [33mWARN: Function `_bigint_from_bytes(bytes)` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:190: DeprecationWarning: [33mWARN: Function `_int_list_from_bigint` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+policy=frozen_cnnv2_ppo condition=maneuver seed=1
+policy=frozen_cnnv2_ppo condition=maneuver seed=2
+policy=frozen_cnnv2_ppo condition=maneuver seed=3
+policy=frozen_cnnv2_ppo condition=maneuver seed=4
+policy=frozen_cnnv2_ppo condition=maneuver seed=5
+policy=frozen_cnnv2_ppo condition=maneuver seed=6
+policy=frozen_cnnv2_ppo condition=maneuver seed=7
+policy=frozen_cnnv2_ppo condition=maneuver seed=8
+policy=frozen_cnnv2_ppo condition=maneuver seed=9
+policy=frozen_cnnv2_ppo condition=maneuver seed=10
+policy=frozen_cnnv2_ppo condition=maneuver seed=11
+policy=frozen_cnnv2_ppo condition=maneuver seed=12
+policy=frozen_cnnv2_ppo condition=maneuver seed=13
+policy=frozen_cnnv2_ppo condition=maneuver seed=14
+policy=frozen_cnnv2_ppo condition=maneuver seed=15
+policy=frozen_cnnv2_ppo condition=maneuver seed=16
+policy=frozen_cnnv2_ppo condition=maneuver seed=17
+policy=frozen_cnnv2_ppo condition=maneuver seed=18
+policy=frozen_cnnv2_ppo condition=maneuver seed=19
+policy=frozen_cnnv2_ppo condition=maneuver seed=20
+policy=frozen_cnnv2_ppo condition=maneuver seed=21
+policy=frozen_cnnv2_ppo condition=maneuver seed=22
+policy=frozen_cnnv2_ppo condition=maneuver seed=23
+policy=frozen_cnnv2_ppo condition=maneuver seed=24
+policy=frozen_cnnv2_ppo condition=maneuver seed=25
+policy=frozen_cnnv2_ppo condition=maneuver seed=26
+policy=frozen_cnnv2_ppo condition=maneuver seed=27
+policy=frozen_cnnv2_ppo condition=maneuver seed=28
+policy=frozen_cnnv2_ppo condition=maneuver seed=29
+policy=frozen_cnnv2_ppo condition=maneuver seed=30
+policy=frozen_cnnv2_ppo condition=maneuver seed=31
+policy=frozen_cnnv2_ppo condition=maneuver seed=32
+policy=frozen_cnnv2_ppo condition=maneuver seed=33
+policy=frozen_cnnv2_ppo condition=maneuver seed=34
+policy=frozen_cnnv2_ppo condition=maneuver seed=35
+policy=frozen_cnnv2_ppo condition=maneuver seed=36
+policy=frozen_cnnv2_ppo condition=maneuver seed=37
+policy=frozen_cnnv2_ppo condition=maneuver seed=38
+policy=frozen_cnnv2_ppo condition=maneuver seed=39
+policy=frozen_cnnv2_ppo condition=maneuver seed=40
+policy=frozen_cnnv2_ppo condition=maneuver seed=41
+policy=frozen_cnnv2_ppo condition=maneuver seed=42
+policy=frozen_cnnv2_ppo condition=maneuver seed=43
+policy=frozen_cnnv2_ppo condition=maneuver seed=44
+policy=frozen_cnnv2_ppo condition=maneuver seed=45

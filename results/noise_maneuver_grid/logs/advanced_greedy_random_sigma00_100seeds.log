@@ -1,0 +1,371 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+skip completed seed=0
+skip completed seed=1
+skip completed seed=2
+skip completed seed=3
+skip completed seed=4
+skip completed seed=5
+skip completed seed=6
+skip completed seed=7
+skip completed seed=8
+skip completed seed=9
+skip completed seed=10
+skip completed seed=11
+skip completed seed=12
+skip completed seed=13
+skip completed seed=14
+skip completed seed=15
+skip completed seed=16
+skip completed seed=17
+skip completed seed=18
+skip completed seed=19
+skip completed seed=20
+skip completed seed=21
+skip completed seed=22
+skip completed seed=23
+skip completed seed=24
+skip completed seed=25
+skip completed seed=26
+skip completed seed=27
+skip completed seed=28
+skip completed seed=29
+skip completed seed=30
+skip completed seed=31
+skip completed seed=32
+skip completed seed=33
+skip completed seed=34
+skip completed seed=35
+skip completed seed=36
+skip completed seed=37
+skip completed seed=38
+skip completed seed=39
+skip completed seed=40
+skip completed seed=41
+skip completed seed=42
+skip completed seed=43
+skip completed seed=44
+skip completed seed=45
+skip completed seed=46
+skip completed seed=47
+skip completed seed=48
+skip completed seed=49
+skip completed seed=50
+skip completed seed=51
+skip completed seed=52
+skip completed seed=53
+skip completed seed=54
+skip completed seed=55
+skip completed seed=56
+skip completed seed=57
+skip completed seed=58
+skip completed seed=59
+skip completed seed=60
+skip completed seed=61
+skip completed seed=62
+skip completed seed=63
+skip completed seed=64
+skip completed seed=65
+skip completed seed=66
+skip completed seed=67
+skip completed seed=68
+skip completed seed=69
+skip completed seed=70
+skip completed seed=71
+skip completed seed=72
+skip completed seed=73
+skip completed seed=74
+skip completed seed=75
+skip completed seed=76
+skip completed seed=77
+skip completed seed=78
+skip completed seed=79
+skip completed seed=80
+skip completed seed=81
+skip completed seed=82
+skip completed seed=83
+skip completed seed=84
+skip completed seed=85
+skip completed seed=86
+skip completed seed=87
+skip completed seed=88
+skip completed seed=89
+skip completed seed=90
+skip completed seed=91
+skip completed seed=92
+skip completed seed=93
+skip completed seed=94
+skip completed seed=95
+skip completed seed=96
+skip completed seed=97
+skip completed seed=98
+skip completed seed=99
+{
+  "output": "/Users/onuraytekn977/Desktop/thesis-wiki/experiments/csce723_maneuver_eval/results/noise_maneuver_grid/advanced_greedy_random_sigma00_100seeds.p",
+  "policy": "advanced_greedy",
+  "condition": "maneuver",
+  "episodes": 100,
+  "training_performed": false,
+  "maneuvering_fraction": 0.2,
+  "maneuver_plan": {
+    "plan_type": "random",
+    "maneuvering_fraction": 0.2,
+    "magnitude_range_mps": [
+      1.0,
+      100.0
+    ],
+    "magnitude_distribution": "log_uniform",
+    "direction_distribution": "isotropic_rtn",
+    "burn_time_window_seconds": [
+      600.0,
+      4800.0
+    ],
+    "burn_time_distribution": "uniform",
+    "plan_seed": 20260823,
+    "magnitude_scale": 1.0,
+    "role": "treatment"
+  },
+  "measurement_noise": {
+    "sigma_km": 0.0,
+    "seed": 20260823
+  },
+  "nis_recorded": true,
+  "nis_summary_last_episode": {
+    "measurements": 1343,
+    "expected_mean_under_consistency": 3.0,
+    "all": {
+      "measurements": 1343,
+      "mean_nis": 0.8783843912901798,
+      "median_nis": 6.170979008874302e-06,
+      "fraction_above_chi2_p95": 0.0014892032762472078,
+      "fraction_above_chi2_p99": 0.0007446016381236039
+    },
+    "non_maneuvering": {
+      "measurements": 790,
+      "mean_nis": 0.0001229404188258814,
+      "median_nis": 1.3019179663839362e-06,
+      "fraction_above_chi2_p95": 0.0,
+      "fraction_above_chi2_p99": 0.0
+    },
+    "maneuvering_before_burn": {
+      "measurements": 71,
+      "mean_nis": 1.4169237817449272e-05,
+      "median_nis": 2.221269370747916e-06,
+      "fraction_above_chi2_p95": 0.0,
+      "fraction_above_chi2_p99": 0.0
+    },
+    "maneuvering_after_burn": {
+      "measurements": 482,
+      "mean_nis": 2.44724503849783,
+      "median_nis": 2.36809819463698,
+      "fraction_above_chi2_p95": 0.004149377593360996,
+      "fraction_above_chi2_p99": 0.002074688796680498
+    }
+  },
+  "mean_final_trace_covariance": 0.011731204859118802,
+  "maneuvering_rsos": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "reacquired_maneuvering_rsos": [
+    4,
+    4,
+    4,
+    5,
+    6,
+    6,
+    7,
+    4,
+    6,
+    4,
+    3,
+    8,
+    8,
+    6,
+    7,
+    4,
+    10,
+    5,
+    3,
+    5,
+    4,
+    6,
+    7,
+    10,
+    9,
+    6,
+    7,
+    8,
+    8,
+    3,
+    6,
+    3,
+    4,
+    7,
+    8,
+    8,
+    4,
+    3,
+    4,
+    9,
+    5,
+    1,
+    9,
+    6,
+    3,
+    11,
+    6,
+    8,
+    3,
+    5,
+    5,
+    6,
+    6,
+    5,
+    8,
+    5,
+    3,
+    3,
+    7,
+    4,
+    8,
+    3,
+    7,
+    6,
+    7,
+    6,
+    7,
+    11,
+    7,
+    8,
+    4,
+    3,
+    8,
+    4,
+    6,
+    8,
+    5,
+    9,
+    9,
+    4,
+    9,
+    11,
+    7,
+    4,
+    5,
+    8,
+    9,
+    4,
+    7,
+    4,
+    7,
+    8,
+    4,
+    6,
+    7,
+    3,
+    7,
+    5,
+    4,
+    6
+  ]
+}

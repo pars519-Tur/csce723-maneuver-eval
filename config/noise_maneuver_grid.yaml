@@ -1,0 +1,139 @@
+schema_version: 1
+experiment_name: csce723_measurement_noise_by_random_maneuver_grid
+mode: inference_only
+training_enabled: false
+created: "2026-08-23"
+parent_experiment: config/experiment.yaml
+
+motivation: >
+  Smith's released environment returns the exact truth position as the measurement
+  (Environments/SSAMultiUtils.py:716, measfun_gt) while the UKF is handed
+  Rmeas = eye(3) * 10**2 (Environments/SSAmulti_v2.py:306). The filter is therefore told
+  that measurements carry a 10 km one-sigma error that the code never generates, which
+  does not match the thesis text describing an environment that "generates noisy
+  measurements within the FOV of each sensor" (Smith 2024, section 2.2). This grid closes
+  that gap from outside Smith's tree and reruns the maneuver evaluation with maneuvers
+  that are no longer restricted to one shared along-track burn.
+
+smith_inputs:
+  source_root: try_code/MARLSSA-main
+  files_modified: none
+  injection_mechanism: >
+    The wrapper temporarily rebinds Environments.SSAmulti_v2.meas for the duration of one
+    step and hands it externally built truth objects. Noise is applied inside those truth
+    objects, so Smith's measurement code, assumed R and policy observations are unchanged.
+
+factors:
+  measurement_noise_sigma_km: [0.0, 10.0]
+  maneuver_condition: [nullburn, random]
+  policy: [advanced_greedy, frozen_cnnv2_ppo]
+  seeds: 100
+  episodes_total: 800
+
+measurement_noise:
+  model: additive_zero_mean_isotropic_gaussian_teme_cartesian
+  applied_to: every RSO, not only the tagged cohort
+  sigma_km: 10.0
+  rationale: matches the R already assumed by Smith's step function, so the UKF becomes consistent
+  assumed_R_changed: false
+  seed: 20260823
+  stream: numpy.random.default_rng per (noise_seed, base_seed, rso_id)
+  isolation: >
+    A dedicated Generator is used so Smith's globally seeded numpy stream, which draws the
+    initial catalog and covariance in reset, is never consumed. Verified by checking the
+    per-episode start covariance against the stored seed snapshots.
+
+maneuver:
+  frame: RTN
+  injection_model: smith_sgp4_plus_differential_two_body_cartesian_perturbation
+  cohort_fraction: 0.20
+  cohort_selection: >
+    Unchanged from the fixed-delta-v runs, so a random-maneuver arm tags exactly the same
+    RSOs as the earlier along-track arms at the same seed and fraction.
+  nullburn:
+    description: >
+      Matched control. Reuses the treatment's own random plan with magnitude_scale = 0, so the
+      tagged cohort, the burn times and the burn directions are identical to the treatment and
+      only the delta-v magnitude differs.
+    delta_v_mps: [0.0, 0.0, 0.0]
+    burn_time_distribution: uniform, identical draw to the treatment
+    burn_time_window_seconds: [600.0, 4800.0]
+    supersedes: >
+      An earlier control used a fixed 900 s burn time. That gave tagged objects a median
+      post-burn observation window of 4500 s against 2770 s in the randomly timed treatment,
+      which moved reacquisition on its own and confounded the custody comparison. Results from
+      that arm are retained under the zerodv name but must not be paired against the treatment.
+    verification: results/noise_maneuver_grid/analysis/control_matching_check.json
+  random:
+    direction_distribution: isotropic_rtn
+    magnitude_distribution: log_uniform
+    magnitude_range_mps: [1.0, 100.0]
+    burn_time_distribution: uniform
+    burn_time_window_seconds: [600.0, 4800.0]
+    plan_seed: 20260823
+
+execution:
+  driver: real_environment/run_noise_maneuver_grid.sh
+  analysis: real_environment/analyze_noise_maneuver_grid.py
+  output_directory: results/noise_maneuver_grid
+  checkpointing: every episode, resumable with --resume
+
+metrics:
+  primary:
+    - final_trace_covariance          # Smith's own reward quantity
+    - estimate_truth_error_km         # physical tracking accuracy
+    - nis                             # normalized innovation squared
+  secondary:
+    - reacquisition_time_seconds        # see the geometry caveat below
+    - post_maneuver_observation_count
+    - mean_reward_per_agent
+    - pointing_action_invariance_under_noise
+  explicitly_out_of_scope:
+    - nees
+    - training_metrics
+
+innovation_statistics:
+  enabled: true
+  definition: nis = nu' (S + R)^-1 nu
+  source: >
+    Recorded by temporarily rebinding Environments.SSAMultiUtils.update for the duration of a
+    step, so S, R, the measurement and the predicted measurement are exactly the arrays Smith's
+    filter used. The wrapper returns Smith's own result unchanged.
+  rationale: >
+    The innovation is the only place a measurement value enters Smith's filter, because his
+    covariance update P = P - K S K' never sees it. NIS is therefore the only quantity in the
+    released filter that can respond to an unmodelled maneuver.
+  null_distribution: chi-square with three degrees of freedom, mean 3
+  thresholds:
+    p95: 7.814727903251179
+    p99: 11.344866730144373
+  note: >
+    The null distribution is only valid once the measurements carry the noise the filter
+    assumes. At sigma = 0 the non-maneuvering NIS mean is about 1.9e-5 against an expectation
+    of 3, so the standard chi-square test never fires even though the maneuvering-after-burn
+    group sits about four orders of magnitude higher. Recording NIS at both noise levels is
+    what makes that point measurable.
+  grouping:
+    - non_maneuvering
+    - maneuvering_before_burn
+    - maneuvering_after_burn
+
+geometry_caveat:
+  finding: >
+    Custody loss through field-of-view escape is geometrically unreachable in this scenario.
+    Measured displacement follows d = 0.00101 * delta_v[m/s] * t[s] km. Leaving Smith's 4 degree
+    field of view at a median GEO radius of 42019 km requires about 1467 km of displacement,
+    which needs roughly 324 m/s given 4500 s of coast after the burn. Typical GEO station-keeping
+    burns are 1 to 5 m/s and displace an object by 4.5 to 23 km, under one percent of the field
+    of view. The median burn in this grid moves an object by 24 km, or 0.8 percent of the field
+    of view, and even the 99th percentile reaches only 12.8 percent.
+  implication: >
+    Reacquisition and custody are not informative endpoints at Smith's 5400 s episode length and
+    4 degree field of view. The maneuver signal in this environment is only visible through the
+    filter innovation, which is what makes NIS the operative metric rather than a supplementary
+    one.
+  policy_response: >
+    Between the null-burn control and the random-maneuver treatment the frozen CNNv2 PPO policy
+    issued identical pointing in 100 of 100 episodes, changing zero of 52014 azimuth decisions.
+    Advanced greedy matched in 50 of 100 episodes and changed 0.56 percent of its decisions. The
+    learned policy cannot be described as responding to maneuvers in this environment.

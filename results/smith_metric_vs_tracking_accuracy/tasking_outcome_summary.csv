@@ -1,0 +1,7 @@
+policy,delta_v_t_mps,truth_gate_rejection_percent,post_burn_observed_percent,selected_measurements
+Advanced Greedy,0,0.07621951219511924,42.5,2624
+Advanced Greedy,10,0.03805175038051889,42.5,2628
+Advanced Greedy,100,10.341331530922604,42.5,2959
+Frozen CNNv2 PPO,0,0.0,81.5,1038
+Frozen CNNv2 PPO,10,0.5785920925747368,81.5,1037
+Frozen CNNv2 PPO,100,5.620155038759689,80.0,1032

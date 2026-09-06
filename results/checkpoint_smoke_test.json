@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "training_performed": false,
+  "environment_rollout_performed": false,
+  "policy_class": "PPOTF1Policy",
+  "observation_shape": [
+    271,
+    19,
+    11
+  ],
+  "action_count": 1710,
+  "logits_shape": [
+    1,
+    1710
+  ],
+  "deterministic_action": 818,
+  "repeated_action_matches": true
+}

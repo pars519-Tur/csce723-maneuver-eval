@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "files": {
+    "frozen_cnnv2_ppo_coast_100seeds.p": {
+      "episodes": 100,
+      "final_mean_trace_covariance": 0.010593613421644494,
+      "final_median_trace_covariance": 0.007746950002259397,
+      "final_p90_trace_covariance": 0.02456456807896653,
+      "truth_fov_events": 0,
+      "measurement_events": 0,
+      "truth_gate_rejections": 0
+    },
+    "frozen_cnnv2_ppo_maneuver_rate05_10mps_100seeds.p": {
+      "episodes": 100,
+      "final_mean_trace_covariance": 0.010593999331573576,
+      "final_median_trace_covariance": 0.00775100023000051,
+      "final_p90_trace_covariance": 0.024564634882388504,
+      "truth_fov_events": 260010,
+      "measurement_events": 2522,
+      "truth_gate_rejections": 12
+    },
+    "frozen_cnnv2_ppo_maneuver_rate10_10mps_100seeds.p": {
+      "episodes": 100,
+      "final_mean_trace_covariance": 0.010593935822767247,
+      "final_median_trace_covariance": 0.00775106642777611,
+      "final_p90_trace_covariance": 0.024564634882388504,
+      "truth_fov_events": 520020,
+      "measurement_events": 5197,
+      "truth_gate_rejections": 19
+    },
+    "frozen_cnnv2_ppo_maneuver_rate20_10mps_100seeds.p": {
+      "episodes": 100,
+      "final_mean_trace_covariance": 0.010594441645596687,
+      "final_median_trace_covariance": 0.007751149727991552,
+      "final_p90_trace_covariance": 0.02456464117810496,
+      "truth_fov_events": 1040020,
+      "measurement_events": 10344,
+      "truth_gate_rejections": 41
+    },
+    "frozen_cnnv2_ppo_stress_rate20_100mps_100seeds.p": {
+      "episodes": 100,
+      "final_mean_trace_covariance": 0.01061538419324074,
+      "final_median_trace_covariance": 0.007771371380940136,
+      "final_p90_trace_covariance": 0.024579374138584856,
+      "truth_fov_events": 1039900,
+      "measurement_events": 10392,
+      "truth_gate_rejections": 557
+    },
+    "advanced_greedy_coast_100seeds.p": {
+      "episodes": 100,
+      "final_mean_trace_covariance": 0.011727941704230103,
+      "final_median_trace_covariance": 0.009703728406187283,
+      "final_p90_trace_covariance": 0.0235391487737892,
+      "truth_fov_events": 0,
+      "measurement_events": 0,
+      "truth_gate_rejections": 0
+    },
+    "advanced_greedy_maneuver_rate05_10mps_100seeds.p": {
+      "episodes": 100,
+      "final_mean_trace_covariance": 0.011728413985506897,
+      "final_median_trace_covariance": 0.009703812270052955,
+      "final_p90_trace_covariance": 0.02353882145512821,
+      "truth_fov_events": 677475,
+      "measurement_events": 5966,
+      "truth_gate_rejections": 32
+    },
+    "advanced_greedy_maneuver_rate10_10mps_100seeds.p": {
+      "episodes": 100,
+      "final_mean_trace_covariance": 0.011728860566308352,
+      "final_median_trace_covariance": 0.009705438598764236,
+      "final_p90_trace_covariance": 0.0235391301390754,
+      "truth_fov_events": 1354670,
+      "measurement_events": 13296,
+      "truth_gate_rejections": 41
+    },
+    "advanced_greedy_maneuver_rate20_10mps_100seeds.p": {
+      "episodes": 100,
+      "final_mean_trace_covariance": 0.011727816135968752,
+      "final_median_trace_covariance": 0.009702811942116907,
+      "final_p90_trace_covariance": 0.023540656418046937,
+      "truth_fov_events": 2709780,
+      "measurement_events": 26969,
+      "truth_gate_rejections": 66
+    },
+    "advanced_greedy_stress_rate20_100mps_100seeds.p": {
+      "episodes": 100,
+      "final_mean_trace_covariance": 0.011804154682480847,
+      "final_median_trace_covariance": 0.009784002736558982,
+      "final_p90_trace_covariance": 0.023575817493882205,
+      "truth_fov_events": 2716480,
+      "measurement_events": 29287,
+      "truth_gate_rejections": 1932
+    }
+  },
+  "pairing_checks": {
+    "initial_covariance_max_absolute_difference": 0.0,
+    "maneuver_subset_policy_mismatches": 0,
+    "pair_ids_exactly_seed_000_through_seed_099": true
+  }
+}

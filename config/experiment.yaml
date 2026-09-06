@@ -1,0 +1,62 @@
+schema_version: 1
+experiment_name: csce723_frozen_policy_maneuver_evaluation
+mode: inference_only
+training_enabled: false
+
+smith_inputs:
+  source_root: try_code/MARLSSA-main
+  checkpoint: try_code/MARLSSA/Models/cnn_v2_reward_1/checkpoint_018000
+  policy_directory: try_code/MARLSSA/Models/cnn_v2_reward_1/checkpoint_018000/policies/shared_policy
+  scenario: try_code/MARLSSA-main/Environments/scenario_configs/3_agents_eval.yaml
+  nominal_ppo_results: try_code/MARLSSA/cnn_v2_reward_1/100_sat_3_agents.p
+  nominal_advanced_greedy_results: try_code/MARLSSA/advgreedy/100_sat_3_agents.p
+
+runtime:
+  conda_environment: /opt/anaconda3/envs/marlssa
+  python: "3.10.20"
+  ray: "2.2.0"
+  tensorflow: "2.13.0"
+  numpy: "1.23.5"
+  prevent_bytecode_writes: true
+
+scenario:
+  sensors: 3
+  rsos: 100
+  episode_length_seconds: 5400
+  seeds: 100
+
+policy:
+  name: cnn_v2_reward_1
+  checkpoint: "018000"
+  shared_policy_id: shared_policy
+  deterministic_action: argmax_logits
+  observation_shape: [271, 19, 11]
+  actor_local_slice: [90, 180]
+  action_count: 1710
+
+comparison_policy:
+  name: advanced_greedy
+  type: deterministic_heuristic
+
+maneuver:
+  enabled: true
+  injection_model: smith_sgp4_plus_differential_two_body_cartesian_perturbation
+  burn_time_seconds: 900
+  frame: RTN
+  direction: along_track
+  maneuvering_rso_fractions: [0.00, 0.05, 0.10, 0.20]
+  primary_delta_v_mps: [0.0, 10.0, 0.0]
+  stress_delta_v_mps: [0.0, 100.0, 0.0]
+  subset_selection: without_replacement_from_base_seed
+  calibration:
+    seeds: 25
+    source: experiments/csce723_maneuver_eval/results/calibration/maneuver_observability_summary.json
+    primary_final_topocentric_angle_deg_median: 0.05531589985360182
+    stress_final_topocentric_angle_deg_median: 0.5518501998510036
+  interpretation:
+    primary: low-observability maneuver condition
+    stress: observability stress test, reported separately from the primary condition
+
+metrics:
+  include_nis: false
+  preserve_smith_fields: true

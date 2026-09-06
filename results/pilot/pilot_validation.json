@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "episodes_per_condition": 1,
+  "paired_start_covariance_max_absolute_difference": 0.0,
+  "maneuvering_rso_ids_match_across_policies": true,
+  "coast_history_max_absolute_difference_from_smith": 2.2551405187698492e-15,
+  "coast_history_differences_by_field": {
+    "advanced_greedy": {
+      "proptime": 0.0,
+      "meancovFOR": 3.5388358909926865e-16,
+      "meancovall": 1.8041124150158794e-16,
+      "mediancovFOR": 2.1736085153989393e-15,
+      "mediancovall": 1.6861512186494565e-15,
+      "rew": 3.222248856626919e-16,
+      "nsats": 0.0,
+      "alt": 0.0,
+      "azi": 0.0
+    },
+    "frozen_cnnv2_ppo": {
+      "proptime": 0.0,
+      "meancovFOR": 2.732189474663471e-16,
+      "meancovall": 1.4051260155412137e-16,
+      "mediancovFOR": 1.0781306403195856e-15,
+      "mediancovall": 2.2551405187698492e-15,
+      "rew": 3.3981606591126923e-16,
+      "nsats": 0.0,
+      "alt": 0.0,
+      "azi": 0.0
+    }
+  },
+  "policy_summary": {
+    "advanced_greedy": {
+      "coast_final_mean_trace_covariance": 0.011413232829818995,
+      "maneuver_final_mean_trace_covariance": 0.01141325387800939,
+      "paired_difference": 2.10481903954729e-08,
+      "maneuvering_rso_count": 10,
+      "reacquired_count": 6,
+      "not_reacquired_count": 4,
+      "truth_gate_rejections": 0
+    },
+    "frozen_cnnv2_ppo": {
+      "coast_final_mean_trace_covariance": 0.010494338355781545,
+      "maneuver_final_mean_trace_covariance": 0.010494515071031779,
+      "paired_difference": 1.767152502333419e-07,
+      "maneuvering_rso_count": 10,
+      "reacquired_count": 8,
+      "not_reacquired_count": 2,
+      "truth_gate_rejections": 0
+    }
+  },
+  "interpretation": "Engineering pilot only; no policy-performance inference from one seed."
+}

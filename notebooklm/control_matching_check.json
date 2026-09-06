@@ -1,0 +1,30 @@
+{
+  "advanced_greedy|sigma=0.0": {
+    "events_compared": 2000,
+    "cohort_mismatches": 0,
+    "burn_time_mismatches": 0,
+    "control_events_with_nonzero_delta_v": 0,
+    "matched": true
+  },
+  "advanced_greedy|sigma=10.0": {
+    "events_compared": 2000,
+    "cohort_mismatches": 0,
+    "burn_time_mismatches": 0,
+    "control_events_with_nonzero_delta_v": 0,
+    "matched": true
+  },
+  "frozen_cnnv2_ppo|sigma=0.0": {
+    "events_compared": 2000,
+    "cohort_mismatches": 0,
+    "burn_time_mismatches": 0,
+    "control_events_with_nonzero_delta_v": 0,
+    "matched": true
+  },
+  "frozen_cnnv2_ppo|sigma=10.0": {
+    "events_compared": 2000,
+    "cohort_mismatches": 0,
+    "burn_time_mismatches": 0,
+    "control_events_with_nonzero_delta_v": 0,
+    "matched": true
+  }
+}

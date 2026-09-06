@@ -1,0 +1,109 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+policy=advanced_greedy condition=maneuver seed=0
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:138: DeprecationWarning: [33mWARN: Function `hash_seed(seed, max_bytes)` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:175: DeprecationWarning: [33mWARN: Function `_bigint_from_bytes(bytes)` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:190: DeprecationWarning: [33mWARN: Function `_int_list_from_bigint` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+policy=advanced_greedy condition=maneuver seed=1
+policy=advanced_greedy condition=maneuver seed=2
+policy=advanced_greedy condition=maneuver seed=3
+policy=advanced_greedy condition=maneuver seed=4
+policy=advanced_greedy condition=maneuver seed=5
+policy=advanced_greedy condition=maneuver seed=6
+policy=advanced_greedy condition=maneuver seed=7
+policy=advanced_greedy condition=maneuver seed=8
+policy=advanced_greedy condition=maneuver seed=9
+{
+  "output": "/Users/onuraytekn977/Desktop/thesis-wiki/experiments/csce723_maneuver_eval/results/residual_traces/advanced_greedy_alongtrack5mps_sigma10_10seeds.p",
+  "policy": "advanced_greedy",
+  "condition": "maneuver",
+  "episodes": 10,
+  "training_performed": false,
+  "maneuvering_fraction": 0.2,
+  "maneuver_plan": {
+    "plan_type": "random",
+    "maneuvering_fraction": 0.2,
+    "magnitude_range_mps": [
+      5.0,
+      5.0
+    ],
+    "magnitude_distribution": "log_uniform",
+    "direction_distribution": "transverse",
+    "burn_time_window_seconds": [
+      600.0,
+      4800.0
+    ],
+    "burn_time_distribution": "uniform",
+    "plan_seed": 20260823,
+    "magnitude_scale": 1.0,
+    "burn_duration_seconds": 0.0,
+    "burn_model": "impulsive",
+    "role": "treatment"
+  },
+  "measurement_noise": {
+    "sigma_km": 10.0,
+    "seed": 20260823
+  },
+  "nis_recorded": true,
+  "nis_summary_last_episode": {
+    "measurements": 1368,
+    "expected_mean_under_consistency": 3.0,
+    "all": {
+      "measurements": 1368,
+      "mean_nis": 2.9530927011896795,
+      "median_nis": 2.2464093550213864,
+      "fraction_above_chi2_p95": 0.051900584795321635,
+      "fraction_above_chi2_p99": 0.014619883040935672
+    },
+    "non_maneuvering": {
+      "measurements": 984,
+      "mean_nis": 2.9737666583112103,
+      "median_nis": 2.2270473714506513,
+      "fraction_above_chi2_p95": 0.0508130081300813,
+      "fraction_above_chi2_p99": 0.019308943089430895
+    },
+    "maneuvering_before_burn": {
+      "measurements": 99,
+      "mean_nis": 2.6069248707439683,
+      "median_nis": 1.9678092680538808,
+      "fraction_above_chi2_p95": 0.04040404040404041,
+      "fraction_above_chi2_p99": 0.0
+    },
+    "maneuvering_after_burn": {
+      "measurements": 285,
+      "mean_nis": 3.0019609166512184,
+      "median_nis": 2.3508223982970544,
+      "fraction_above_chi2_p95": 0.05964912280701754,
+      "fraction_above_chi2_p99": 0.0035087719298245615
+    }
+  },
+  "mean_final_trace_covariance": 0.01199061433406004,
+  "maneuvering_rsos": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "reacquired_maneuvering_rsos": [
+    4,
+    4,
+    4,
+    5,
+    6,
+    6,
+    7,
+    4,
+    6,
+    4
+  ]
+}

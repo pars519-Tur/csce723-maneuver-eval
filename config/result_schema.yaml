@@ -1,0 +1,138 @@
+schema_version: 2
+format: python_pickle_mapping
+purpose: Preserve Smith plot compatibility while retaining maneuver-specific per-episode and per-RSO data.
+
+dimensions:
+  episode: Number of Monte Carlo episodes in the result file.
+  agent: Three Smith sensor agents.
+  event: Asynchronous action-completion events for one agent.
+  rso: One hundred resident space objects in the initial experiment.
+  maneuver_event: Impulsive truth maneuvers defined by the paired scenario manifest.
+
+metadata_fields:
+  schema_version:
+    type: integer
+    value: 1
+  run_id:
+    type: string
+  pair_ids:
+    type: list[string]
+    shape: [episode]
+  policy_name:
+    type: string
+    allowed: [frozen_cnnv2_ppo, advanced_greedy]
+  condition:
+    type: string
+    allowed: [coast, maneuver]
+  scenario_manifest_paths:
+    type: list[string]
+    shape: [episode]
+  immutable_input_manifest:
+    type: string
+  maneuvering_fraction:
+    type: float
+  delta_v_rtn_mps:
+    type: array[float]
+    shape: [3]
+  burn_time_seconds:
+    type: float
+
+smith_compatible_fields:
+  proptime:
+    type: list[dict[agent, array[float]]]
+    shape: [episode, agent, event]
+    units: seconds
+  meancovall:
+    type: list[dict[agent, array[float]]]
+    shape: [episode, agent, event]
+  mediancovall:
+    type: list[dict[agent, array[float]]]
+    shape: [episode, agent, event]
+  meancovFOR:
+    type: list[dict[agent, array[float]]]
+    shape: [episode, agent, event]
+  mediancovFOR:
+    type: list[dict[agent, array[float]]]
+    shape: [episode, agent, event]
+  rew:
+    type: list[dict[agent, array[float]]]
+    shape: [episode, agent, event]
+  nsats:
+    type: list[dict[agent, array[integer]]]
+    shape: [episode, agent, event]
+    meaning: Cumulative unique RSOs entering each sensor field of regard, matching Smith semantics.
+  alt:
+    type: list[dict[agent, array[float]]]
+    shape: [episode, agent, event]
+    units: degrees
+  azi:
+    type: list[dict[agent, array[float]]]
+    shape: [episode, agent, event]
+    units: degrees
+  start_trace_cov_list:
+    type: array[float]
+    shape: [rso]
+    compatibility_note: Smith legacy field; contains only the final stored episode.
+  end_trace_cov_list:
+    type: array[float]
+    shape: [rso]
+    compatibility_note: Smith legacy field; contains only the final stored episode.
+
+complete_covariance_fields:
+  start_trace_cov_by_episode:
+    type: array[float]
+    shape: [episode, rso]
+  end_trace_cov_by_episode:
+    type: array[float]
+    shape: [episode, rso]
+  trace_covariance_history_by_rso:
+    type: list[compact_table]
+    shape: [episode, variable_event, rso]
+    columns:
+      time_seconds: array[float32]
+      trace_covariance: array[float32]
+
+maneuver_fields:
+  maneuver_rso_ids:
+    type: list[array[integer]]
+    shape: [episode, variable]
+  maneuver_events:
+    type: list[list[record]]
+    shape: [episode, maneuver_event]
+    record_fields: [rso_id, time_seconds, frame, delta_v_mps]
+  angular_separation_history:
+    type: list[compact_table]
+    columns:
+      rso_id: array[int16]
+      time_seconds: array[float32]
+      separation_degrees: array[float32]
+  post_maneuver_observation_count:
+    type: array[integer]
+    shape: [episode, rso]
+  first_post_maneuver_observation_time:
+    type: array[float_or_nan]
+    shape: [episode, rso]
+    units: seconds
+  reacquisition_time:
+    type: array[float_or_nan]
+    shape: [episode, rso]
+    units: seconds_after_maneuver
+  reacquired:
+    type: array[boolean]
+    shape: [episode, rso]
+  truth_fov_events:
+    type: list[compact_table]
+    record_fields: [time_seconds, agent_id, rso_id, truth_in_fov, selected_by_smith_estimate, angular_separation_deg]
+  measurement_events:
+    type: list[compact_table]
+    record_fields: [time_seconds, agent_id, rso_id, selected_by_smith_estimate, truth_in_fov, measurement_received]
+  estimation_error_history:
+    type: list[dict]
+    description: Per-episode Cartesian error histories for the tagged RSO cohort, evaluated in Smith's own TEME measurement space.
+    record_fields: [time_seconds, rso_id, estimate_truth_error_km, nominal_truth_offset_km, estimate_nominal_error_km]
+
+explicitly_out_of_scope:
+  - nis
+  - nees
+  - training_metrics
+  - fine_tuning_metrics

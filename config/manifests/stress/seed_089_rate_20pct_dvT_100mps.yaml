@@ -1,0 +1,154 @@
+schema_version: 1
+manifest_id: seed_089_rate_20pct_dvT_100mps
+pair_id: seed_089
+runnable: true
+base_seed: 89
+scenario:
+  source: try_code/MARLSSA-main/Environments/scenario_configs/3_agents_eval.yaml
+  source_sha256: c107665e8da659a1b70d458316a7ec374d84be06f3fdedc171db7ea4bd5ee8ca
+  sensors: 3
+  rsos: 100
+  episode_length_seconds: 5400
+initial_state_snapshot:
+  status: ready
+  path: experiments/csce723_maneuver_eval/results/snapshots/seed_089.npz
+  sha256: c90bfced309c844af7071f00c3fa4418524a30dbf2ac122653dbef13bbf141be
+  contents:
+  - truth_tle_records
+  - truth_cartesian_state
+  - estimated_tle_records
+  - estimated_orbital_elements
+  - covariance
+  - initial_sensor_pointing
+randomness:
+  smith_environment_seed: 89
+  detection_model: deterministic_probability_one
+  policy_exploration: false
+conditions:
+- coast
+- maneuver
+maneuver_plan:
+  status: ready
+  selection_seed: 104818
+  frame: RTN
+  events:
+  - rso_id: 1
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 3
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 12
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 23
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 26
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 27
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 29
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 40
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 47
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 49
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 55
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 64
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 65
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 78
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 79
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 83
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 88
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 96
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 97
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0
+  - rso_id: 99
+    time_seconds: 900.0
+    delta_v_mps:
+    - 0.0
+    - 100.0
+    - 0.0

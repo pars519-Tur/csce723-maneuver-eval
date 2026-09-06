@@ -1,0 +1,379 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+skip completed seed=0
+skip completed seed=1
+skip completed seed=2
+skip completed seed=3
+skip completed seed=4
+skip completed seed=5
+skip completed seed=6
+skip completed seed=7
+skip completed seed=8
+skip completed seed=9
+skip completed seed=10
+skip completed seed=11
+policy=advanced_greedy condition=maneuver seed=12
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:138: DeprecationWarning: [33mWARN: Function `hash_seed(seed, max_bytes)` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:175: DeprecationWarning: [33mWARN: Function `_bigint_from_bytes(bytes)` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:190: DeprecationWarning: [33mWARN: Function `_int_list_from_bigint` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+policy=advanced_greedy condition=maneuver seed=13
+policy=advanced_greedy condition=maneuver seed=14
+policy=advanced_greedy condition=maneuver seed=15
+policy=advanced_greedy condition=maneuver seed=16
+policy=advanced_greedy condition=maneuver seed=17
+policy=advanced_greedy condition=maneuver seed=18
+policy=advanced_greedy condition=maneuver seed=19
+policy=advanced_greedy condition=maneuver seed=20
+policy=advanced_greedy condition=maneuver seed=21
+policy=advanced_greedy condition=maneuver seed=22
+policy=advanced_greedy condition=maneuver seed=23
+policy=advanced_greedy condition=maneuver seed=24
+policy=advanced_greedy condition=maneuver seed=25
+policy=advanced_greedy condition=maneuver seed=26
+policy=advanced_greedy condition=maneuver seed=27
+policy=advanced_greedy condition=maneuver seed=28
+policy=advanced_greedy condition=maneuver seed=29
+policy=advanced_greedy condition=maneuver seed=30
+policy=advanced_greedy condition=maneuver seed=31
+policy=advanced_greedy condition=maneuver seed=32
+policy=advanced_greedy condition=maneuver seed=33
+policy=advanced_greedy condition=maneuver seed=34
+policy=advanced_greedy condition=maneuver seed=35
+policy=advanced_greedy condition=maneuver seed=36
+policy=advanced_greedy condition=maneuver seed=37
+policy=advanced_greedy condition=maneuver seed=38
+policy=advanced_greedy condition=maneuver seed=39
+policy=advanced_greedy condition=maneuver seed=40
+policy=advanced_greedy condition=maneuver seed=41
+policy=advanced_greedy condition=maneuver seed=42
+policy=advanced_greedy condition=maneuver seed=43
+policy=advanced_greedy condition=maneuver seed=44
+policy=advanced_greedy condition=maneuver seed=45
+policy=advanced_greedy condition=maneuver seed=46
+policy=advanced_greedy condition=maneuver seed=47
+policy=advanced_greedy condition=maneuver seed=48
+policy=advanced_greedy condition=maneuver seed=49
+policy=advanced_greedy condition=maneuver seed=50
+policy=advanced_greedy condition=maneuver seed=51
+policy=advanced_greedy condition=maneuver seed=52
+policy=advanced_greedy condition=maneuver seed=53
+policy=advanced_greedy condition=maneuver seed=54
+policy=advanced_greedy condition=maneuver seed=55
+policy=advanced_greedy condition=maneuver seed=56
+policy=advanced_greedy condition=maneuver seed=57
+policy=advanced_greedy condition=maneuver seed=58
+policy=advanced_greedy condition=maneuver seed=59
+policy=advanced_greedy condition=maneuver seed=60
+policy=advanced_greedy condition=maneuver seed=61
+policy=advanced_greedy condition=maneuver seed=62
+policy=advanced_greedy condition=maneuver seed=63
+policy=advanced_greedy condition=maneuver seed=64
+policy=advanced_greedy condition=maneuver seed=65
+policy=advanced_greedy condition=maneuver seed=66
+policy=advanced_greedy condition=maneuver seed=67
+policy=advanced_greedy condition=maneuver seed=68
+policy=advanced_greedy condition=maneuver seed=69
+policy=advanced_greedy condition=maneuver seed=70
+policy=advanced_greedy condition=maneuver seed=71
+policy=advanced_greedy condition=maneuver seed=72
+policy=advanced_greedy condition=maneuver seed=73
+policy=advanced_greedy condition=maneuver seed=74
+policy=advanced_greedy condition=maneuver seed=75
+policy=advanced_greedy condition=maneuver seed=76
+policy=advanced_greedy condition=maneuver seed=77
+policy=advanced_greedy condition=maneuver seed=78
+policy=advanced_greedy condition=maneuver seed=79
+policy=advanced_greedy condition=maneuver seed=80
+policy=advanced_greedy condition=maneuver seed=81
+policy=advanced_greedy condition=maneuver seed=82
+policy=advanced_greedy condition=maneuver seed=83
+policy=advanced_greedy condition=maneuver seed=84
+policy=advanced_greedy condition=maneuver seed=85
+policy=advanced_greedy condition=maneuver seed=86
+policy=advanced_greedy condition=maneuver seed=87
+policy=advanced_greedy condition=maneuver seed=88
+policy=advanced_greedy condition=maneuver seed=89
+policy=advanced_greedy condition=maneuver seed=90
+policy=advanced_greedy condition=maneuver seed=91
+policy=advanced_greedy condition=maneuver seed=92
+policy=advanced_greedy condition=maneuver seed=93
+policy=advanced_greedy condition=maneuver seed=94
+policy=advanced_greedy condition=maneuver seed=95
+policy=advanced_greedy condition=maneuver seed=96
+policy=advanced_greedy condition=maneuver seed=97
+policy=advanced_greedy condition=maneuver seed=98
+policy=advanced_greedy condition=maneuver seed=99
+{
+  "output": "/Users/onuraytekn977/Desktop/thesis-wiki/experiments/csce723_maneuver_eval/results/noise_maneuver_grid/advanced_greedy_finite1800s_sigma10_100seeds.p",
+  "policy": "advanced_greedy",
+  "condition": "maneuver",
+  "episodes": 100,
+  "training_performed": false,
+  "maneuvering_fraction": 0.2,
+  "maneuver_plan": {
+    "plan_type": "random",
+    "maneuvering_fraction": 0.2,
+    "magnitude_range_mps": [
+      1.0,
+      100.0
+    ],
+    "magnitude_distribution": "log_uniform",
+    "direction_distribution": "isotropic",
+    "burn_time_window_seconds": [
+      600.0,
+      4800.0
+    ],
+    "burn_time_distribution": "uniform",
+    "plan_seed": 20260823,
+    "magnitude_scale": 1.0,
+    "burn_duration_seconds": 1800.0,
+    "burn_model": "finite",
+    "role": "treatment"
+  },
+  "measurement_noise": {
+    "sigma_km": 10.0,
+    "seed": 20260823
+  },
+  "nis_recorded": true,
+  "nis_summary_last_episode": {
+    "measurements": 1344,
+    "expected_mean_under_consistency": 3.0,
+    "all": {
+      "measurements": 1344,
+      "mean_nis": 3.2933299395720312,
+      "median_nis": 2.491093578340136,
+      "fraction_above_chi2_p95": 0.07217261904761904,
+      "fraction_above_chi2_p99": 0.020089285714285716
+    },
+    "non_maneuvering": {
+      "measurements": 790,
+      "mean_nis": 2.7935606522844862,
+      "median_nis": 2.119011380390142,
+      "fraction_above_chi2_p95": 0.04050632911392405,
+      "fraction_above_chi2_p99": 0.007594936708860759
+    },
+    "maneuvering_before_burn": {
+      "measurements": 71,
+      "mean_nis": 2.4386736791517416,
+      "median_nis": 1.7863227560358519,
+      "fraction_above_chi2_p95": 0.028169014084507043,
+      "fraction_above_chi2_p99": 0.0
+    },
+    "maneuvering_after_burn": {
+      "measurements": 483,
+      "mean_nis": 4.236390667205573,
+      "median_nis": 3.4277324566735863,
+      "fraction_above_chi2_p95": 0.13043478260869565,
+      "fraction_above_chi2_p99": 0.043478260869565216
+    }
+  },
+  "mean_final_trace_covariance": 0.01173592319310064,
+  "maneuvering_rsos": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "reacquired_maneuvering_rsos": [
+    4,
+    4,
+    4,
+    5,
+    6,
+    6,
+    7,
+    4,
+    6,
+    4,
+    3,
+    8,
+    8,
+    6,
+    7,
+    4,
+    10,
+    5,
+    3,
+    5,
+    4,
+    6,
+    7,
+    10,
+    9,
+    6,
+    7,
+    8,
+    8,
+    3,
+    5,
+    3,
+    4,
+    7,
+    8,
+    8,
+    4,
+    3,
+    4,
+    9,
+    5,
+    1,
+    9,
+    6,
+    3,
+    8,
+    6,
+    8,
+    3,
+    5,
+    5,
+    7,
+    6,
+    5,
+    8,
+    5,
+    3,
+    3,
+    7,
+    4,
+    8,
+    3,
+    6,
+    6,
+    7,
+    6,
+    8,
+    11,
+    7,
+    8,
+    4,
+    3,
+    8,
+    4,
+    6,
+    8,
+    5,
+    9,
+    8,
+    4,
+    9,
+    11,
+    7,
+    4,
+    5,
+    8,
+    9,
+    3,
+    7,
+    4,
+    7,
+    8,
+    4,
+    6,
+    7,
+    3,
+    7,
+    5,
+    4,
+    6
+  ]
+}

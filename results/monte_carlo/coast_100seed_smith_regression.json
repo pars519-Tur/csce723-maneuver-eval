@@ -1,0 +1,32 @@
+{
+  "frozen_cnnv2_ppo": {
+    "episodes": 100,
+    "max_history_differences": {
+      "proptime": 0.0,
+      "meancovFOR": 1.0894063429134349e-15,
+      "meancovall": 3.4867941867133823e-16,
+      "mediancovFOR": 2.1578225317675503e-14,
+      "mediancovall": 1.0630385460785874e-14,
+      "rew": 1.1663846971599057e-15,
+      "nsats": 0.0,
+      "alt": 0.0,
+      "azi": 0.0
+    },
+    "overall_max": 2.1578225317675503e-14
+  },
+  "advanced_greedy": {
+    "episodes": 100,
+    "max_history_differences": {
+      "proptime": 0.0,
+      "meancovFOR": 3.59187922460702e-11,
+      "meancovall": 9.342391443789566e-12,
+      "mediancovFOR": 1.0482933965327845e-14,
+      "mediancovall": 4.646468002023063e-10,
+      "rew": 1.0380407972235969e-10,
+      "nsats": 0.0,
+      "alt": 0.0,
+      "azi": 0.0
+    },
+    "overall_max": 4.646468002023063e-10
+  }
+}

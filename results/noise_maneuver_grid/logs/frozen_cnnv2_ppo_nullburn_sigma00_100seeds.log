@@ -1,0 +1,378 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:tensorflow:OMP_NUM_THREADS is no longer used by the default Keras config. To configure the number of threads, use tf.config.threading APIs.
+policy=frozen_cnnv2_ppo condition=maneuver seed=0
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:138: DeprecationWarning: [33mWARN: Function `hash_seed(seed, max_bytes)` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:175: DeprecationWarning: [33mWARN: Function `_bigint_from_bytes(bytes)` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:190: DeprecationWarning: [33mWARN: Function `_int_list_from_bigint` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+policy=frozen_cnnv2_ppo condition=maneuver seed=1
+policy=frozen_cnnv2_ppo condition=maneuver seed=2
+policy=frozen_cnnv2_ppo condition=maneuver seed=3
+policy=frozen_cnnv2_ppo condition=maneuver seed=4
+policy=frozen_cnnv2_ppo condition=maneuver seed=5
+policy=frozen_cnnv2_ppo condition=maneuver seed=6
+policy=frozen_cnnv2_ppo condition=maneuver seed=7
+policy=frozen_cnnv2_ppo condition=maneuver seed=8
+policy=frozen_cnnv2_ppo condition=maneuver seed=9
+policy=frozen_cnnv2_ppo condition=maneuver seed=10
+policy=frozen_cnnv2_ppo condition=maneuver seed=11
+policy=frozen_cnnv2_ppo condition=maneuver seed=12
+policy=frozen_cnnv2_ppo condition=maneuver seed=13
+policy=frozen_cnnv2_ppo condition=maneuver seed=14
+policy=frozen_cnnv2_ppo condition=maneuver seed=15
+policy=frozen_cnnv2_ppo condition=maneuver seed=16
+policy=frozen_cnnv2_ppo condition=maneuver seed=17
+policy=frozen_cnnv2_ppo condition=maneuver seed=18
+policy=frozen_cnnv2_ppo condition=maneuver seed=19
+policy=frozen_cnnv2_ppo condition=maneuver seed=20
+policy=frozen_cnnv2_ppo condition=maneuver seed=21
+policy=frozen_cnnv2_ppo condition=maneuver seed=22
+policy=frozen_cnnv2_ppo condition=maneuver seed=23
+policy=frozen_cnnv2_ppo condition=maneuver seed=24
+policy=frozen_cnnv2_ppo condition=maneuver seed=25
+policy=frozen_cnnv2_ppo condition=maneuver seed=26
+policy=frozen_cnnv2_ppo condition=maneuver seed=27
+policy=frozen_cnnv2_ppo condition=maneuver seed=28
+policy=frozen_cnnv2_ppo condition=maneuver seed=29
+policy=frozen_cnnv2_ppo condition=maneuver seed=30
+policy=frozen_cnnv2_ppo condition=maneuver seed=31
+policy=frozen_cnnv2_ppo condition=maneuver seed=32
+policy=frozen_cnnv2_ppo condition=maneuver seed=33
+policy=frozen_cnnv2_ppo condition=maneuver seed=34
+policy=frozen_cnnv2_ppo condition=maneuver seed=35
+policy=frozen_cnnv2_ppo condition=maneuver seed=36
+policy=frozen_cnnv2_ppo condition=maneuver seed=37
+policy=frozen_cnnv2_ppo condition=maneuver seed=38
+policy=frozen_cnnv2_ppo condition=maneuver seed=39
+policy=frozen_cnnv2_ppo condition=maneuver seed=40
+policy=frozen_cnnv2_ppo condition=maneuver seed=41
+policy=frozen_cnnv2_ppo condition=maneuver seed=42
+policy=frozen_cnnv2_ppo condition=maneuver seed=43
+policy=frozen_cnnv2_ppo condition=maneuver seed=44
+policy=frozen_cnnv2_ppo condition=maneuver seed=45
+policy=frozen_cnnv2_ppo condition=maneuver seed=46
+policy=frozen_cnnv2_ppo condition=maneuver seed=47
+policy=frozen_cnnv2_ppo condition=maneuver seed=48
+policy=frozen_cnnv2_ppo condition=maneuver seed=49
+policy=frozen_cnnv2_ppo condition=maneuver seed=50
+policy=frozen_cnnv2_ppo condition=maneuver seed=51
+policy=frozen_cnnv2_ppo condition=maneuver seed=52
+policy=frozen_cnnv2_ppo condition=maneuver seed=53
+policy=frozen_cnnv2_ppo condition=maneuver seed=54
+policy=frozen_cnnv2_ppo condition=maneuver seed=55
+policy=frozen_cnnv2_ppo condition=maneuver seed=56
+policy=frozen_cnnv2_ppo condition=maneuver seed=57
+policy=frozen_cnnv2_ppo condition=maneuver seed=58
+policy=frozen_cnnv2_ppo condition=maneuver seed=59
+policy=frozen_cnnv2_ppo condition=maneuver seed=60
+policy=frozen_cnnv2_ppo condition=maneuver seed=61
+policy=frozen_cnnv2_ppo condition=maneuver seed=62
+policy=frozen_cnnv2_ppo condition=maneuver seed=63
+policy=frozen_cnnv2_ppo condition=maneuver seed=64
+policy=frozen_cnnv2_ppo condition=maneuver seed=65
+policy=frozen_cnnv2_ppo condition=maneuver seed=66
+policy=frozen_cnnv2_ppo condition=maneuver seed=67
+policy=frozen_cnnv2_ppo condition=maneuver seed=68
+policy=frozen_cnnv2_ppo condition=maneuver seed=69
+policy=frozen_cnnv2_ppo condition=maneuver seed=70
+policy=frozen_cnnv2_ppo condition=maneuver seed=71
+policy=frozen_cnnv2_ppo condition=maneuver seed=72
+policy=frozen_cnnv2_ppo condition=maneuver seed=73
+policy=frozen_cnnv2_ppo condition=maneuver seed=74
+policy=frozen_cnnv2_ppo condition=maneuver seed=75
+policy=frozen_cnnv2_ppo condition=maneuver seed=76
+policy=frozen_cnnv2_ppo condition=maneuver seed=77
+policy=frozen_cnnv2_ppo condition=maneuver seed=78
+policy=frozen_cnnv2_ppo condition=maneuver seed=79
+policy=frozen_cnnv2_ppo condition=maneuver seed=80
+policy=frozen_cnnv2_ppo condition=maneuver seed=81
+policy=frozen_cnnv2_ppo condition=maneuver seed=82
+policy=frozen_cnnv2_ppo condition=maneuver seed=83
+policy=frozen_cnnv2_ppo condition=maneuver seed=84
+policy=frozen_cnnv2_ppo condition=maneuver seed=85
+policy=frozen_cnnv2_ppo condition=maneuver seed=86
+policy=frozen_cnnv2_ppo condition=maneuver seed=87
+policy=frozen_cnnv2_ppo condition=maneuver seed=88
+policy=frozen_cnnv2_ppo condition=maneuver seed=89
+policy=frozen_cnnv2_ppo condition=maneuver seed=90
+policy=frozen_cnnv2_ppo condition=maneuver seed=91
+policy=frozen_cnnv2_ppo condition=maneuver seed=92
+policy=frozen_cnnv2_ppo condition=maneuver seed=93
+policy=frozen_cnnv2_ppo condition=maneuver seed=94
+policy=frozen_cnnv2_ppo condition=maneuver seed=95
+policy=frozen_cnnv2_ppo condition=maneuver seed=96
+policy=frozen_cnnv2_ppo condition=maneuver seed=97
+policy=frozen_cnnv2_ppo condition=maneuver seed=98
+policy=frozen_cnnv2_ppo condition=maneuver seed=99
+{
+  "output": "/Users/onuraytekn977/Desktop/thesis-wiki/experiments/csce723_maneuver_eval/results/noise_maneuver_grid/frozen_cnnv2_ppo_nullburn_sigma00_100seeds.p",
+  "policy": "frozen_cnnv2_ppo",
+  "condition": "maneuver",
+  "episodes": 100,
+  "training_performed": false,
+  "maneuvering_fraction": 0.2,
+  "maneuver_plan": {
+    "plan_type": "random",
+    "maneuvering_fraction": 0.2,
+    "magnitude_range_mps": [
+      1.0,
+      100.0
+    ],
+    "magnitude_distribution": "log_uniform",
+    "direction_distribution": "isotropic_rtn",
+    "burn_time_window_seconds": [
+      600.0,
+      4800.0
+    ],
+    "burn_time_distribution": "uniform",
+    "plan_seed": 20260823,
+    "magnitude_scale": 0.0,
+    "role": "null_burn_control"
+  },
+  "measurement_noise": {
+    "sigma_km": 0.0,
+    "seed": 20260823
+  },
+  "nis_recorded": true,
+  "nis_summary_last_episode": {
+    "measurements": 527,
+    "expected_mean_under_consistency": 3.0,
+    "all": {
+      "measurements": 527,
+      "mean_nis": 0.0005218006995766814,
+      "median_nis": 7.482896946501593e-06,
+      "fraction_above_chi2_p95": 0.0,
+      "fraction_above_chi2_p99": 0.0
+    },
+    "non_maneuvering": {
+      "measurements": 429,
+      "mean_nis": 0.0006363218441738438,
+      "median_nis": 7.482896946501593e-06,
+      "fraction_above_chi2_p95": 0.0,
+      "fraction_above_chi2_p99": 0.0
+    },
+    "maneuvering_before_burn": {
+      "measurements": 53,
+      "mean_nis": 2.389965741376711e-05,
+      "median_nis": 1.0409944985484601e-05,
+      "fraction_above_chi2_p95": 0.0,
+      "fraction_above_chi2_p99": 0.0
+    },
+    "maneuvering_after_burn": {
+      "measurements": 45,
+      "mean_nis": 1.6449237408943576e-05,
+      "median_nis": 5.3333719513281914e-06,
+      "fraction_above_chi2_p95": 0.0,
+      "fraction_above_chi2_p99": 0.0
+    }
+  },
+  "mean_final_trace_covariance": 0.010593662705086668,
+  "maneuvering_rsos": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "reacquired_maneuvering_rsos": [
+    15,
+    16,
+    11,
+    17,
+    16,
+    12,
+    15,
+    13,
+    15,
+    13,
+    14,
+    12,
+    17,
+    16,
+    12,
+    16,
+    17,
+    14,
+    13,
+    17,
+    14,
+    13,
+    15,
+    16,
+    16,
+    12,
+    14,
+    17,
+    12,
+    16,
+    16,
+    15,
+    16,
+    16,
+    15,
+    13,
+    13,
+    10,
+    14,
+    15,
+    15,
+    13,
+    15,
+    16,
+    11,
+    13,
+    12,
+    13,
+    14,
+    12,
+    14,
+    15,
+    12,
+    11,
+    16,
+    11,
+    14,
+    9,
+    17,
+    13,
+    16,
+    13,
+    15,
+    12,
+    18,
+    13,
+    15,
+    14,
+    16,
+    15,
+    13,
+    8,
+    14,
+    17,
+    14,
+    16,
+    14,
+    14,
+    15,
+    16,
+    13,
+    17,
+    13,
+    10,
+    17,
+    14,
+    13,
+    14,
+    13,
+    16,
+    15,
+    17,
+    11,
+    9,
+    14,
+    17,
+    12,
+    14,
+    12,
+    18
+  ]
+}

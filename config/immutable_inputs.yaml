@@ -1,0 +1,36 @@
+schema_version: 1
+created: "2026-08-17"
+hash_algorithm: sha256
+
+tree_inputs:
+  smith_source:
+    path: try_code/MARLSSA-main
+    digest: 31f40309de540eff83dabaa5554268e1b632745706784c5b0ee604d76d32bea7
+    exclusions:
+      - "*/__pycache__/*"
+      - "*/.ipynb_checkpoints/*"
+      - ".DS_Store"
+  cnnv2_reward1_checkpoint_018000:
+    path: try_code/MARLSSA/Models/cnn_v2_reward_1/checkpoint_018000
+    digest: 404f0877829f472bd25cabc360bb94e50a18019577c0d4efeab00ef085d14c16
+    exclusions: []
+
+file_inputs:
+  ppo_nominal_results:
+    path: try_code/MARLSSA/cnn_v2_reward_1/100_sat_3_agents.p
+    digest: cd062ab6341151b7d05c4b350057610f38c7a06e82bcc2d2058708d814740a3f
+  advanced_greedy_nominal_results:
+    path: try_code/MARLSSA/advgreedy/100_sat_3_agents.p
+    digest: 7817e09b0ceaed30addd3bbfb9a015b15fe1ecb1514fa5b3de43d7be16442295
+  smith_environment:
+    path: try_code/MARLSSA-main/Environments/SSAmulti_v2.py
+    digest: 426a062c6c216f87a76e66f05a346a03c26b7f14d84b0095059ada8a8c1362bf
+  smith_cnnv2_model:
+    path: try_code/MARLSSA-main/CNN_v2.py
+    digest: dace89246dd8ed16ebfa803173bf3f3caac16b2f57496599c668ed287a61256a
+  smith_evaluation_functions:
+    path: try_code/MARLSSA-main/evaluation_functions.py
+    digest: ddc47a2ad038f1e44941105d7505e8e74f1bd06b57edd355a5d99c433f199527
+  smith_three_agent_scenario:
+    path: try_code/MARLSSA-main/Environments/scenario_configs/3_agents_eval.yaml
+    digest: c107665e8da659a1b70d458316a7ec374d84be06f3fdedc171db7ea4bd5ee8ca

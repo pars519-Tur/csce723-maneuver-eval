@@ -1,0 +1,71 @@
+{
+  "method": "Smith SGP4 nominal truth plus differential two-body Cartesian maneuver perturbation",
+  "seeds": 25,
+  "burn_seconds": 900.0,
+  "episode_seconds": 5400.0,
+  "sample_step_seconds": 300.0,
+  "frame": "RTN",
+  "direction": "along_track",
+  "summary": [
+    {
+      "delta_v_t_mps": 1,
+      "final_position_separation_km_median": 4.418544147036746,
+      "final_position_separation_km_p95": 4.45769818995379,
+      "final_topocentric_angle_deg_median": 0.005536116985047285,
+      "final_topocentric_angle_deg_p95": 0.006963265281045258,
+      "fraction_sensor_views_above_0_25_deg": 0.0,
+      "fraction_sensor_views_above_0_5_deg": 0.0,
+      "fraction_sensor_views_above_1_deg": 0.0
+    },
+    {
+      "delta_v_t_mps": 5,
+      "final_position_separation_km_median": 22.09280376920962,
+      "final_position_separation_km_p95": 22.288512974935475,
+      "final_topocentric_angle_deg_median": 0.027670522194336997,
+      "final_topocentric_angle_deg_p95": 0.034809949413404775,
+      "fraction_sensor_views_above_0_25_deg": 0.0,
+      "fraction_sensor_views_above_0_5_deg": 0.0,
+      "fraction_sensor_views_above_1_deg": 0.0
+    },
+    {
+      "delta_v_t_mps": 10,
+      "final_position_separation_km_median": 44.1858152294163,
+      "final_position_separation_km_p95": 44.57708106413247,
+      "final_topocentric_angle_deg_median": 0.05531589985360182,
+      "final_topocentric_angle_deg_p95": 0.0696039470214091,
+      "fraction_sensor_views_above_0_25_deg": 0.0,
+      "fraction_sensor_views_above_0_5_deg": 0.0,
+      "fraction_sensor_views_above_1_deg": 0.0
+    },
+    {
+      "delta_v_t_mps": 25,
+      "final_position_separation_km_median": 110.46609761021729,
+      "final_position_separation_km_p95": 111.44311687238073,
+      "final_topocentric_angle_deg_median": 0.13816277274014047,
+      "final_topocentric_angle_deg_p95": 0.173890076266826,
+      "fraction_sensor_views_above_0_25_deg": 0.0,
+      "fraction_sensor_views_above_0_5_deg": 0.0,
+      "fraction_sensor_views_above_1_deg": 0.0
+    },
+    {
+      "delta_v_t_mps": 50,
+      "final_position_separation_km_median": 220.93740597866577,
+      "final_position_separation_km_p95": 222.88762013586387,
+      "final_topocentric_angle_deg_median": 0.2761930121239255,
+      "final_topocentric_angle_deg_p95": 0.3473798399805903,
+      "fraction_sensor_views_above_0_25_deg": 0.76,
+      "fraction_sensor_views_above_0_5_deg": 0.0,
+      "fraction_sensor_views_above_1_deg": 0.0
+    },
+    {
+      "delta_v_t_mps": 100,
+      "final_position_separation_km_median": 441.8957459388673,
+      "final_position_separation_km_p95": 445.7808282203326,
+      "final_topocentric_angle_deg_median": 0.5518501998510036,
+      "final_topocentric_angle_deg_p95": 0.6931510092837649,
+      "fraction_sensor_views_above_0_25_deg": 1.0,
+      "fraction_sensor_views_above_0_5_deg": 0.76,
+      "fraction_sensor_views_above_1_deg": 0.0
+    }
+  ]
+}

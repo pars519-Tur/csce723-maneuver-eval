@@ -1,0 +1,30 @@
+{
+  "advanced_greedy|zerodv": {
+    "episodes_compared": 3,
+    "episodes_with_identical_pointing": 0,
+    "fraction_identical": 0.0,
+    "azimuth_decisions_compared": 4077,
+    "azimuth_decisions_changed": 46
+  },
+  "advanced_greedy|random": {
+    "episodes_compared": 3,
+    "episodes_with_identical_pointing": 0,
+    "fraction_identical": 0.0,
+    "azimuth_decisions_compared": 4077,
+    "azimuth_decisions_changed": 45
+  },
+  "frozen_cnnv2_ppo|zerodv": {
+    "episodes_compared": 8,
+    "episodes_with_identical_pointing": 8,
+    "fraction_identical": 1.0,
+    "azimuth_decisions_compared": 4148,
+    "azimuth_decisions_changed": 0
+  },
+  "frozen_cnnv2_ppo|random": {
+    "episodes_compared": 7,
+    "episodes_with_identical_pointing": 7,
+    "fraction_identical": 1.0,
+    "azimuth_decisions_compared": 3579,
+    "azimuth_decisions_changed": 0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "seed": 0,
+  "requested_steps": 12,
+  "completed_steps": 12,
+  "maneuvering_fraction": 0.0,
+  "max_observation_absolute_difference": 0.0,
+  "max_state_absolute_difference": 0.0,
+  "max_reward_absolute_difference": 0.0,
+  "max_time_absolute_difference_seconds": 0.0,
+  "maneuver_events_recorded": 0,
+  "passed": true
+}

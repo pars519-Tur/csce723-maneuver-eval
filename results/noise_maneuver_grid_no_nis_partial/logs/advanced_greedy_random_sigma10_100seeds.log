@@ -1,0 +1,30 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+policy=advanced_greedy condition=maneuver seed=0
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:138: DeprecationWarning: [33mWARN: Function `hash_seed(seed, max_bytes)` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:175: DeprecationWarning: [33mWARN: Function `_bigint_from_bytes(bytes)` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+/opt/anaconda3/envs/marlssa/lib/python3.10/site-packages/gym/utils/seeding.py:190: DeprecationWarning: [33mWARN: Function `_int_list_from_bigint` is marked as deprecated and will be removed in the future. [0m
+  deprecation(
+policy=advanced_greedy condition=maneuver seed=1
+policy=advanced_greedy condition=maneuver seed=2
+policy=advanced_greedy condition=maneuver seed=3
+policy=advanced_greedy condition=maneuver seed=4
+policy=advanced_greedy condition=maneuver seed=5
+policy=advanced_greedy condition=maneuver seed=6
+policy=advanced_greedy condition=maneuver seed=7
+policy=advanced_greedy condition=maneuver seed=8
+policy=advanced_greedy condition=maneuver seed=9
+policy=advanced_greedy condition=maneuver seed=10
+policy=advanced_greedy condition=maneuver seed=11
+policy=advanced_greedy condition=maneuver seed=12
+policy=advanced_greedy condition=maneuver seed=13
+policy=advanced_greedy condition=maneuver seed=14
+policy=advanced_greedy condition=maneuver seed=15
+policy=advanced_greedy condition=maneuver seed=16
+policy=advanced_greedy condition=maneuver seed=17
+policy=advanced_greedy condition=maneuver seed=18
+policy=advanced_greedy condition=maneuver seed=19
+policy=advanced_greedy condition=maneuver seed=20
