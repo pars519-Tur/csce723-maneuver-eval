@@ -54,7 +54,7 @@ python -m real_environment.build_residual_cache --seeds 100
 jupyter nbconvert --to notebook --execute --inplace notebooks/10_paper_figures.ipynb
 ```
 
-The IEEE paper sources live outside this tree; the paper build reads
+The paper build reads
 `results/noise_maneuver_grid/figures_paper` in place.
 
 ## Seeds
